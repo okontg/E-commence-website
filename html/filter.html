@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>searching</title>
+    <!--icon link-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../css/filter.css">
+  </head>
+
+  <body>
+    <header class="none">
+      <a href="" class="logo">
+        <h4>Okon</h4>
+      </a>
+
+      <div class="search__field">
+        <input type="search" placeholder="search for product" class="search__input-field" data-input-filed="search">
+        <button class="submit__product" data-submit="search">Search</button>
+      </div>
+
+      <a href="cart.html" class="cart-basket">
+        <span class="cart-quantity" data-product="quantity"></span>
+        <i class='bx bx-cart'></i>
+      </a >
+
+      <div class="display__category js-display-category"> 
+        <div class="icon-position">
+          <i class='bx bx-menu'></i>
+          <i class='bx bx-x bx-minus hide-category'></i>
+        </div>
+
+        <nav class="category__of-product js-active-button">
+          <button class="all active-state" data-key="all">All</button>
+          <button class="men__product" data-key="men">Men Product</button>
+          <button class="women__product" data-key="women">Women Product</button>
+          <button class="shoes" data-key="shoes">Shoes</button>
+          <button class="applienace" data-key="applienace">Applinace</button>
+          <button class="popular__product" data-key="popular">Popular Product</button>
+          <button class="new__added" data-key="new">New Product</button>
+        </nav>
+         
+      </div>
+    </header>
+
+    <main>
+      <div class="product-wrapper">
+       
+      </div>
+    </main>
+    
+    <script src="../js/main-product.js" type="module"></script>
+  </body>
+</html>

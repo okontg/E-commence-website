@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="discription" content="how to make a filtering, search engine using javascript">
+    <title>product filter</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <!--TITLE TPROTOTYPE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&display=swap" rel="stylesheet">
+    <!--GENERAL PROTOTPYE-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+
+   <main>
+    <div class="wrapper">
+      <div id="search-container" class="search-product">
+        <input type="search" id="search-input" placeholder="Search here...">
+        <button id="search">Search</button>
+      </div>
+
+      <div id="buttons">
+        <button class="button-value" onclick="filterProduct('all')">All</button>
+        <button class="button-value" onclick="filterProduct('Topwear')">Topwear</button>
+        <button class="button-value" onclick="filterProduct('Bottomwear')">Bottomwear</button>
+        <button class="button-value" onclick="filterProduct('Jacket')">Jacket</button>
+        <button class="button-value" onclick="filterProduct('Watch')">Watch</button>
+      </div>
+    </div>
+
+    <div id="products"></div>
+   </main>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

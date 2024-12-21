@@ -1,0 +1,175 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  height: 100dvh;
+  
+  display: flex;
+  flex-direction: column;
+
+  font-family: 'Roboto', 'Edu';
+}
+
+.wrapper{
+  padding: 1.25rem;
+  margin-bottom: 0.7rem;
+  width: 100%;
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+}
+
+.search-product{
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.search-product input{
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0.3rem 0.5rem;
+  font-family: 'roboto';
+
+  border-bottom: 0.1rem solid rgba(99, 13, 179, 0.5);
+}
+
+.search-product input:focus-visible{
+  outline: 0.2rem solid rgba(99, 13, 179, 0.5);
+  border-radius: 6px;
+}
+
+.search-product button{
+  color: #000;
+  background: rgba(99, 13, 179, 0.5);
+  font-family: 'roboto';
+  outline: none;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.5rem 0.937rem;
+  font-size: 0.973rem;
+  font-weight: 500;
+  cursor: pointer;
+  
+  transition: all .2s linear;
+}
+
+.search-product button:hover{
+  box-shadow: 0.3rem 0.1rem 0.5rem inset rgba(255,255,255,.5), -0.3rem -0.2rem 0.3rem inset rgba(255,255,255,.7); 
+}
+
+#buttons{
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 0.937rem;
+
+  flex-wrap: wrap;
+} 
+
+#buttons button{
+  font-weight: 500;
+  font-size: 0.937rem;
+  padding: 0.5rem 0.937rem;
+  outline: none;
+  border: 0.1rem solid rgba(99, 13, 179, 0.5);
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(99, 13, 179, 0.5);
+  border-radius: 1.125rem;
+  color: rgb(99, 13, 179);
+  background: transparent;
+  gap: 0.10rem;
+  cursor: pointer;
+
+  transition: all 0.5s ease-in-out;
+}
+
+#buttons button:hover{
+  box-shadow: none;
+}
+
+#products{
+  margin: 20px 0 20px 0;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+#products .card{
+  width: 17.375rem;
+  height: 20rem;
+  border: 1px solid gray;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card .image-container img{
+  width: 100%;
+  height: 13.267rem;
+  background-position: center;
+  object-fit: contain;
+}
+
+.card .product-details{
+  padding: .5rem;
+  background: rgba(99, 13, 179, 0.5);
+  border-bottom-left-radius: 9.5px;
+  border-bottom-right-radius: 9.5px;
+
+  flex: 1;
+  height: 6.380rem;
+}
+
+.product-price{
+  margin-top: 15px;
+  font-size: 0.978rem;
+  font-weight: 600;
+
+}
+
+/**
+  HIDE PRODUCT
+*/
+#products .card.hidden{
+  display: none;
+}
+
+#buttons button.active{
+  background: rgba(99, 13, 179, 0.8);
+  color: white;
+}
+
+@media screen and (max-width: 720px){
+  .wrapper{
+    display: block;
+  }
+  .search-product{
+    position: fixed;
+    width: 90%;
+    
+  }
+  .search-product input{
+    width: 80%;
+  }
+  #buttons{
+    width: 100%;
+    margin-top: 50px;
+    flex-wrap: nowrap;
+    justify-content: center;
+    overflow-x: scroll;
+  }
+
+  #buttons::-webkit-scrollbar{
+    display: none;
+  }
+  
+}

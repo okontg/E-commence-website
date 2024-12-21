@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cart shopping</title>
+  <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+  <!------------------HEADER CONTAINER--------------------->
+  <header>
+    <a href="../html/filter.html" class="logo">
+      <h3>okon</h3>
+    </a>
+    <h4 data-total="item"></h4>
+
+    <a href="../html/order-item.html" class="orders header__invisible">Product Order</a>
+  </header>
+  <!------------------------MAIN CONTAINER------------>
+  <main data-main="container">
+    <!------------------CART ITEMS FOR ORDER-->
+    <section class="right__section" data-htmlElement="cart">
+
+    </section>
+
+    <!--THE PRODUCT DATA-->
+    <section class="left__section" data-left-container="product">
+      
+    </section>
+  </main>
+
+  <!-----------------FORM SECTION
+        ------------>
+
+  <section class="form invisible" data-form="form">
+    <div class="card-header flex-item">
+      <h3 class="billing-method">Add a Billing Method</h3>
+      <img src="../products/icon/cancel-icon.png" alt="cancel icon" width="20" data-remove="form" class="js-cancel-form">
+    </div>
+    <hr><br>
+
+    <form action="">
+      <div class="section">
+        <label for="credit-card-radio" class="flex-item">
+          <input type="radio" id="credit-card-radio" name="radio" value="credit-card">
+          <span class="radio__button"></span>
+          <span class="pay__with-card">Pay With Credit or Debit Card</span>
+        </label>
+        
+        <div class="your-card">
+          <div class="card__type flex-item">
+            <h4>Card Number</h4>
+            <div class="cards">
+              <img src="../products/icon/master-card.png" alt="master card" width="20">
+              <img src="../products/icon/visa-card.png" alt="visa card" width="20">
+            </div>
+          </div>
+        
+          <div  class="contain flex-item">
+            <label for="card-number" class="card flex-item">
+              <img src="../products/icon/card-id.png" alt="card icon" width="20">
+              <input type="number" id="card-number">
+            </label>
+  
+            <label for="security" class="security flex-item">
+              <img src="../products/icon/security-lock-icon.png" alt="security icon" width="20">
+              <input type="text" id="security" placeholder="Security Store">
+            </label>
+
+          </div>
+        </div>
+        
+        <div class="personale-info flex-item">
+          <div class="first__name">
+            <label for="frist-name"><h3>Frist Name</h3></label>
+            <input type="text" id="frist-name" placeholder="Okon">
+          </div>
+    
+          <div class="last__name">
+            <label for="last-name"><h3>Last Name</h3></label>
+            <input type="text" id="last-name" placeholder="Thankgod">
+          </div>
+        </div>
+  
+        <div class="card-details flex-item">
+
+          <div class="expire-on">
+            <h4>Expire On</h4>
+            <div class="expires flex-item">
+              <label for="month">
+                <input type="number" id="month" placeholder="mm">
+              </label>
+
+              <label for="year">
+                <input type="number" id="year" placeholder="yy">
+              </label>
+            </div>  
+          </div>
+  
+          <label for="security-code" class="security-code">          
+            <div class="security-num flex-item">
+              <h4>Security Code</h4>
+              <img src="../products/icon/question-icon.png" alt="question-icon">
+            </div>
+
+            <input type="number" id="security-code" placeholder="*****">
+          </label>
+        </div>
+  
+        <input type="submit" placeholder="Checkout" data-submit="form">
+      </div>
+
+      <br><hr>
+
+      <label for="paypal-radio" class="flex-item pad">
+        <input type="radio" id="paypal-radio" name="radio">
+        <span class="radio__button"></span>
+        <img src="../products/icon/papypal-icon.png" alt="paypal icon" width="20">
+      </label>
+
+    </form>
+  </section>
+
+  <!--------------THE PAGE FOOTER---------------->
+  <footer></footer>
+  <script src="../js/cart/cart.js" type="module"></script>
+</body>
+</html>
